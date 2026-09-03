@@ -1,0 +1,4 @@
+import { useEffect } from 'react'
+import { Pause, Play, Square } from 'lucide-react'
+import { formatTime } from '../models'
+export default function Timer({seconds,running,onTick,onToggle,onStop}) { useEffect(()=>{if(!running)return;const id=setInterval(onTick,1000);return()=>clearInterval(id)},[running,onTick]);return <section className="timer-panel"><div><span className="kicker">02 / registro en vivo</span><p className="timer-label">Tiempo observado</p></div><strong className="timer-value">{formatTime(seconds)}</strong><div className="timer-actions"><button className="button primary" onClick={onToggle}>{running?<Pause size={16}/>:<Play size={16}/>} {running?'Pausar':'Iniciar'}</button><button className="button danger" onClick={onStop}><Square size={15}/> Detener</button></div></section> }
