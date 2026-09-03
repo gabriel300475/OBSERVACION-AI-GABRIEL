@@ -17,5 +17,5 @@ export const formatTime = (seconds = 0) => {
 }
 export function blankObservation() {
   const now = Date.now()
-  return { id: now, docente: '', grupo: '', asignatura: '', fecha: new Date().toISOString().slice(0, 10), campoFormativo: CAMPOS[0], ejes: [], elapsedSeconds: 0, bitacora: [], ratings: {}, feedback: { fortalezas: '', oportunidades: '', acuerdos: '' }, createdAt: now }
+  return { id: now, docente: '', grupo: '', asignatura: '', fecha: new Date().toISOString().slice(0, 10), campoFormativo: [CAMPOS[0]], ejes: [], elapsedSeconds: 0, bitacora: [], ratings: {}, feedback: { fortalezas: '', oportunidades: '', acuerdos: '' }, createdAt: now }
 }
