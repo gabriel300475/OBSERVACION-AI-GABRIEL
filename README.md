@@ -22,6 +22,15 @@ La contraseña nunca se guarda en esta aplicación; Supabase gestiona las creden
 
 ## Producción
 
+En Vercel configura estas variables en **Project Settings > Environment Variables** para los entornos que uses:
+
+```text
+VITE_SUPABASE_URL=https://tu-project-ref.supabase.co
+VITE_SUPABASE_ANON_KEY=tu-publishable-o-anon-key
+```
+
+Usa la clave publishable/anon del proyecto. No pongas nunca una clave `service_role` en variables `VITE_` ni en el navegador.
+
 ```bash
 npm run build
 npm run preview
